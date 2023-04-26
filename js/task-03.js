@@ -37,7 +37,7 @@ const images = [
 
 const list = document.querySelector(".gallery");
 
-const imageEl = images.map(({ url, alt }) => `<li> <img> src = "${url}" alt = "${alt}" </img> </li>`).join(" ");
+const imageEl = images.map(({ url, alt }) => `<li> <img src = "${url}" alt = "${alt}" width = "350"> </li>`).join(" ");
 
 console.log(imageEl);
 
