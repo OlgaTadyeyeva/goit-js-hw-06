@@ -5,17 +5,20 @@ const dataLength = inputEl.getAttribute(`data-length`);
 inputEl.addEventListener("blur", onInputBlur);
 
 
-function onInputBlur(event) { 
-     const value = event.currentTarget.value.trim().length
+function onInputBlur(event) {
+    const value = event.currentTarget.value.trim().length
     if (value === Number(dataLength)) {
-        inputEl.classList.add(`valid`);
-        inputEl.classList.remove(`invalid`);
+        changeClass(`valid`, `invalid`)
     }
 
     else {
-        inputEl.classList.remove(`valid`);
-        inputEl.classList.add(`invalid`);
+        changeClass(`invalid`, `valid`)
     }
-
+   
 }
 
+function changeClass(a, b) { 
+    inputEl.classList.add(a);
+    inputEl.classList.remove(b)
+
+}
